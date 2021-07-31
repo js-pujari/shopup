@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
+  max-width: 1280px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.sidebar-item {
+  padding: 1em;
+}
+.sidebar-item::before {
+  content: '|';
+  padding-right: 1em;
+}
+.sidebar-item.active {
+  color: blue;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background: #f4f8fb;
+  padding: 1em;
+  position: relative;
+}
+.update {
+  display: flex;
+  padding: .8em;
+  margin-left: 2rem;
+  position: absolute;
+  top: 0;
+  max-width: 75%;
+  right: 0;
+  background: #badbdf;
+}
+.m-1 {
+  margin: .5em;
+}
+.rt {
+  transform: rotate(-90deg);
+}
+table, th, td {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
 }
 
-.App-link {
-  color: #61dafb;
+.r {
+  padding: .6em;
+  background: #f8e4a5;
+  color: #f1b56c;
+  font-weight: bold;
+  border: 2px solid #f1b56c;
+  border-width: 0;
+  border-left-width: 2px;
+}
+tbody td {
+  padding: .6em;
+}
+.g {
+  padding: .6em;
+  background: #b7e7cb;
+  color: #53af61;
+  font-weight: bold;
+  border: 2px solid #53af61;
+  border-width: 0;
+  border-left-width: 2px;
+}
+.o {
+  padding: .6em;
+}
+.cgpa-cards {
+  max-width:100%;
+  height: auto;
+  /* border: 1px solid #ddd; */
+  padding: 1em;
+  background: white;
+}
+.lt::before {
+  content: '<';
+  padding-right: .3em;
+}
+.rt::before {
+  content: '>';
+  padding-left: .3em;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.cgpa-card {
+  border: 1px solid #ddd;
+  padding: .6em;
+  margin: 0 .3em;
+  border-radius: 10px;
+}
+.cgpa-card-container {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.at-c {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: white;
+  margin-bottom: 1em;
+}
+.at-c-rgt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.at-c-card {
+  border-radius: 10px;
+  padding: .4em;
+  margin: .3em;
+  width: 35%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.at-c-left {
+  display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-right: 1em;
+    border-right: 1px solid #ddd;
 }
